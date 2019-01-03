@@ -233,7 +233,7 @@ public class MobiBenchExe extends Thread {
 	native int getMobibenchState();
 
 	public void LoadEngine() {
-		System.loadLibrary("native-lib");
+//		System.loadLibrary("native-lib");
 	}
 
 	public void printResult() {
