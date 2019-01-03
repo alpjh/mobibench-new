@@ -61,10 +61,11 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
 int getMobibenchProgress(JNIEnv* env, jobject obj)
 {
 //	printf("%s\n", __func__);
-/*
 
-    return progress;
-*/
+
+    //return progress;
+    return 5;
+
 }
 
 int getMobibenchState(JNIEnv* env, jobject obj)
@@ -124,8 +125,8 @@ void mobibench_run(JNIEnv* env, jobject obj, jstring string)
     env->SetFloatField(obj, fid, tps);
 
     fid = env->GetFieldID(cls, "throughput", "F");
-    env->SetFloatField(obj, fid, throughput);
-*/
+    env->SetFloatField(obj, fid, throughput);*/
+
 
     for(int i = 0; i < argc; i++) {
         free(argv[i]);
