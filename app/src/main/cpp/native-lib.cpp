@@ -39,7 +39,7 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
         printf("JNI version Error");
         return JNI_ERR;
     }
-    cls = env->FindClass("com.example.esos.andctest/MobiBench/MobiBenchExe");
+    cls = env->FindClass("com/example/esos/andctest/MobiBench/MobiBenchExe");
 
     nm[0].name = "mobibench_run";
     nm[0].signature = "(Ljava/lang/String;)V";
@@ -97,7 +97,7 @@ void mobibench_run(JNIEnv* env, jobject obj, jstring string)
     const char *str = env->GetStringUTFChars(string, 0);
     printf("%s\n", str);
     jfieldID fid;
-    jclass cls = env->FindClass("com.example.esos.andctest/MobiBench/MobiBenchExe");
+    jclass cls = env->FindClass("com/example/esos/andctest/MobiBench/MobiBenchExe");
     argv = (char**)malloc(sizeof(char) * 1024);
     argc = arg(argv, (char *)str);
 
